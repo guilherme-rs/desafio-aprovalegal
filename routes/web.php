@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('layout.home');
+})->name('home');
+
+Route::resource('company', 'App\Http\Controllers\CompanyController');
+Route::resource('sector', 'App\Http\Controllers\SectorController');
